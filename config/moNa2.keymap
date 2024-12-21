@@ -16,10 +16,10 @@
     combos { compatible = "zmk,combos"; };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+        pass: to_layer_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &kp LS(T) &kp A &kp I &kp C &kp H &kp I &kp H &kp I &kp R &kp A &kp N &kp O &kp N4 &kp N1 &kp N1 &kp N2 &kp LS(P)>;
             label = "TO_LAYER_0";
         };
     };
@@ -28,7 +28,7 @@
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+            bindings = <&mo>, <&pass>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
