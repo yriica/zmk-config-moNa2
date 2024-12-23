@@ -22,6 +22,48 @@
             bindings = <&kp N1 &kp LS(T) &kp A &kp I &kp C &kp H &kp I &kp H &kp I &kp R &kp A &kp N &kp O &kp N4 &kp N1 &kp N1 &kp N2 &kp LS(P)>;
             label = "TO_LAYER_0";
         };
+
+        asterisk: asterisk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp ASTERISK>;
+            label = "ASTERISK";
+        };
+
+        slash: slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp SLASH>;
+            label = "SLASH";
+        };
+
+        dot: dot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp DOT>;
+            label = "DOT";
+        };
+
+        comma: colon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp COMMA>;
+            label = "COLON";
+        };
+
+        hash: hashtag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp HASH>;
+            label = "HASHTAG";
+        };
+
+        atmark: atmark {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp AT>;
+            label = "ATMARK";
+        };
     };
 
     behaviors {
@@ -48,10 +90,10 @@
 
         default_layer {
             bindings = <
-&kp TAB           &kp W      &kp E                  &kp R                    &kp T                                                         &kp Y        &kp U  &kp I     &kp O     &kp BACKSPACE
-&kp A             &kp S      &lt 6 D                &kp F                    &kp G                    &trans                &kp LS(LG(P))  &kp H        &kp J  &kp K     &kp L     &kp ENTER
-&mt LEFT_SHIFT Z  &kp X      &kp C                  &kp V                    &kp B                    &kp ENTER             &kp LA(SPACE)  &kp N        &kp M  &mkp MB1  &mkp MB2  &kp ESCAPE
-&mt LEFT_SHIFT Q  &kp COMMA  &mt LEFT_SHIFT PERIOD  &mt LEFT_WIN LANGUAGE_1  &mt LEFT_ALT LANGUAGE_2  &mt LEFT_ALT SPACE    &lt 1 SPACE    &lt 1 SPACE                             &mo 6
+&kp TAB           &kp W      &kp E                  &kp R                    &kp T                                                         &kp Y            &kp U  &kp I     &kp O     &kp BACKSPACE
+&kp A             &kp S      &lt 6 D                &kp F                    &kp G                    &trans                &kp LS(LG(P))  &kp H            &kp J  &kp K     &kp L     &kp ENTER
+&mt LEFT_SHIFT Z  &kp X      &kp C                  &kp V                    &kp B                    &kp ENTER             &kp LA(SPACE)  &kp N            &kp M  &mkp MB1  &mkp MB2  &kp ESCAPE
+&mt LEFT_SHIFT Q  &kp COMMA  &mt LEFT_SHIFT PERIOD  &mt LEFT_WIN LANGUAGE_1  &mt LEFT_ALT LANGUAGE_2  &mt LEFT_ALT SPACE    &lt 1 SPACE    &lt 1 BACKSPACE                             &mo 6
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
@@ -59,10 +101,10 @@
 
         layer_1 {
             bindings = <
-&kp PERCENT     &kp EQUAL  &kp N7        &kp N8        &kp N9                                 &kp EXCLAMATION  &kp QUESTION  &kp DOUBLE_QUOTES     &kp GRAVE              &kp P
-&kp AMPERSAND   &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans        &trans     &kp AT_SIGN      &kp HASH      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS
-&kp UNDERSCORE  &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans     &kp ASTERISK     &kp SLASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH
-&kp LEFT_SHIFT  &kp COMMA  &kp PERIOD    &kp N0        &kp COLON     &kp PERIOD    &kp SPACE  &kp ENTER                                                                   &trans
+&kp PERCENT     &kp EQUAL  &kp N7        &kp N8        &kp N9                             &kp EXCLAMATION  &kp QUESTION  &kp DOUBLE_QUOTES     &kp GRAVE              &kp P
+&kp AMPERSAND   &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans     &atmark          &hash         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS
+&kp UNDERSCORE  &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &trans     &asterisk        &slash        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH
+&kp LEFT_SHIFT  &comma     &dot          &kp N0        &kp COLON     &dot      &kp SPACE  &kp ENTER                                                                   &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
