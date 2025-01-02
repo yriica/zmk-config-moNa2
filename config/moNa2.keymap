@@ -110,7 +110,7 @@
         code: code {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp GRAVE>;
+            bindings = <&kp LANGUAGE_2 &kp GRAVE &kp GRAVE &kp GRAVE>;
             label = "CODE";
         };
     };
@@ -156,7 +156,7 @@
 &kp LEFT_SHIFT  &comma     &kp N0        &kp N0        &colon        &dot      &kp SPACE  &kp ENTER                                               &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
+            sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
         layer_2 {
