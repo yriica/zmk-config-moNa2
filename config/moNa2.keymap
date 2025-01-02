@@ -99,6 +99,20 @@
             bindings = <&kp LANGUAGE_1 &kp LEFT_BRACKET &kp RIGHT_BRACKET>;
             label = "BRACKET2";
         };
+
+        quotation: quotation {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp DOUBLE_QUOTES>;
+            label = "QUOTATION";
+        };
+
+        code: code {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp GRAVE>;
+            label = "CODE";
+        };
     };
 
     behaviors {
@@ -136,10 +150,10 @@
 
         layer_1 {
             bindings = <
-&kp PERCENT     &kp EQUAL  &kp N7        &kp N8        &kp N9                             &kp EXCLAMATION  &kp QUESTION  &kp DOUBLE_QUOTES  &kp GRAVE  &kp P
-&kp AMPERSAND   &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans     &atmark          &hash         &bracket           &bracket2  &kp MINUS
-&kp UNDERSCORE  &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &trans     &asterisk        &slash        &parentheses       &task      &kp SLASH
-&kp LEFT_SHIFT  &comma     &dot          &kp N0        &colon        &dot      &kp SPACE  &kp ENTER                                                    &trans
+&kp PERCENT     &kp EQUAL  &kp N7        &kp N8        &kp N9                             &kp EXCLAMATION  &kp QUESTION  &quotation    &code      &kp P
+&kp AMPERSAND   &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans     &atmark          &hash         &bracket      &bracket2  &kp MINUS
+&kp UNDERSCORE  &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &trans     &asterisk        &slash        &parentheses  &task      &kp SLASH
+&kp LEFT_SHIFT  &comma     &dot          &kp N0        &colon        &dot      &kp SPACE  &kp ENTER                                               &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
