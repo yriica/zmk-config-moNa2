@@ -120,6 +120,13 @@
             bindings = <&kp LANGUAGE_2 &kp GRAVE>;
             label = "CODE";
         };
+
+        colon2: colon2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1 &kp COLON>;
+            label = "COLON2";
+        };
     };
 
     behaviors {
@@ -157,10 +164,10 @@
 
         layer_1 {
             bindings = <
-&kp PERCENT     &kp EQUAL  &kp N7        &kp N8        &kp N9                             &kp EXCLAMATION  &kp QUESTION  &quotation    &code      &kp P
-&kp AMPERSAND   &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &mention   &atmark          &hash         &bracket      &bracket2  &kp MINUS
-&kp UNDERSCORE  &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &trans     &asterisk        &slash        &parentheses  &task      &kp SLASH
-&kp LEFT_SHIFT  &comma     &kp N0        &kp N0        &colon        &dot      &kp SPACE  &kp ENTER                                               &trans
+&kp PERCENT     &kp EQUAL  &kp N7        &kp N8        &kp N9                            &kp EXCLAMATION  &kp QUESTION  &quotation    &code      &kp P
+&kp AMPERSAND   &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &mention  &atmark          &hash         &bracket      &bracket2  &kp MINUS
+&kp UNDERSCORE  &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &colon2   &asterisk        &slash        &parentheses  &task      &kp SLASH
+&kp LEFT_SHIFT  &comma     &dot          &kp N0        &colon        &dot      &trans    &trans                                                  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
@@ -212,10 +219,10 @@
 
         MOUSE {
             bindings = <
-&trans          &kp UP_ARROW    &trans           &trans        &kp LS(LG(N8))                                                 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &kp LC(LG(Q))
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans        &kp LS(LG(N7))        &trans                   &bt BT_CLR_ALL  &kp LANGUAGE_1  &kp LANGUAGE_2  &kp UP_ARROW    &trans           &to_layer_0
-&kp LG(Y)       &trans          &trans           &trans        &kp LS(LG(NUMBER_6))  &trans                   &trans          &trans          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(W)
-&kp LEFT_SHIFT  &kp LS(LG(P))   &kp LA(SPACE)    &kp LEFT_WIN  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)    &mkp MB3        &mkp MB4                                                         &trans
+&trans          &kp UP_ARROW      &trans           &trans        &kp LS(LG(N8))                                                 &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &kp LC(LG(Q))
+&kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW  &trans        &kp LS(LG(N7))        &trans                   &bt BT_CLR_ALL  &trans        &trans          &kp UP_ARROW    &trans           &to_layer_0
+&trans          &trans            &trans           &trans        &kp LS(LG(NUMBER_6))  &trans                   &trans          &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(W)
+&kp LEFT_SHIFT  &kp LC(NUMBER_3)  &kp LA(SPACE)    &kp LEFT_WIN  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)    &mkp MB3        &mkp MB4                                                       &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
