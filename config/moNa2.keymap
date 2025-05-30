@@ -15,13 +15,6 @@
     combos { compatible = "zmk,combos"; };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp N1 &kp LS(T) &kp A &kp I &kp C &kp H &kp I &kp H &kp I &kp R &kp A &kp N &kp O &kp N4 &kp N1 &kp N1 &kp N2 &kp LS(P)>;
-            label = "TO_LAYER_0";
-        };
-
         asterisk: asterisk {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -219,7 +212,7 @@
         MOUSE {
             bindings = <
 &trans          &kp UP_ARROW    &trans           &trans        &kp LS(LG(N8))                                                 &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &kp LC(LG(Q))
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans        &kp LS(LG(N7))        &trans                   &bt BT_CLR_ALL  &trans        &trans          &kp UP_ARROW    &trans           &to_layer_0
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans        &kp LS(LG(N7))        &trans                   &bt BT_CLR_ALL  &trans        &trans          &kp UP_ARROW    &trans           &kp LA(NUMBER_3)
 &trans          &trans          &trans           &trans        &kp LS(LG(NUMBER_6))  &trans                   &trans          &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(W)
 &kp LEFT_SHIFT  &kp LC(SPACE)   &kp LA(SPACE)    &kp LEFT_WIN  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)    &mkp MB3        &mkp MB4                                                       &trans
             >;
