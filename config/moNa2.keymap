@@ -147,7 +147,7 @@
 
         layer_1 {
             bindings = <
-&kp PERCENT     &kp EQUAL  &kp N7        &kp N8        &kp N9                             &kp EXCLAMATION  &kp QUESTION  &quotation    &code             &kp P
+&kp PERCENT     &kp EQUAL  &kp N7        &kp N8        &kp N9                             &kp EXCLAMATION  &kp QUESTION  &quotation    &kp GRAVE         &kp P
 &kp AMPERSAND   &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &kp MINUS  &atmark          &hash         &bracket      &bracket2         &kp MINUS
 &kp UNDERSCORE  &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &kp SLASH  &asterisk        &slash        &parentheses  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &kp LEFT_SHIFT  &comma     &dot          &kp N0        &colon        &dot      &trans     &trans                                                         &trans
