@@ -119,13 +119,6 @@
             bindings = <&kp LANGUAGE_1 &kp COLON>;
             label = "COLON2";
         };
-
-        dash: P1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp N1 &kp P>;
-            label = "P1";
-        };
     };
 
     behaviors {
