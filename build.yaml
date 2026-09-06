@@ -1,26 +1,7 @@
-# This file generates the GitHub Actions matrix.
-# For simple board + shield combinations, add them to the top level board and
-# shield arrays, for more control, add individual board + shield combinations
-# to the `include` property. You can also use the `cmake-args` property to
-# pass flags to the build command and `artifact-name` to assign a name to
-# distinguish build outputs from each other:
-#
-# board: [ "nice_nano_v2" ]
-# shield: [ "corne_left", "corne_right" ]
-# include:
-#   - board: bdn9_rev2
-#   - board: nice_nano_v2
-#     shield: reviung41
-#   - board: nice_nano_v2
-#     shield: corne_left
-#     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
-#     artifact-name: corne_left_with_logging
-#
----
+# Temporary right-half build for PMW3610 startup diagnostics.
 include:
   - board: seeeduino_xiao_ble
     shield: moNa2_R rgbled_adapter
-  - board: seeeduino_xiao_ble
-    shield: moNa2_L rgbled_adapter
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
+    snippet: zmk-usb-logging
+    cmake-args: -DCONFIG_INPUT_LOG_LEVEL_INF=y -DCONFIG_ZMK_LOG_LEVEL_WRN=y -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=15000 -DCONFIG_LOG_BUFFER_SIZE=8192
+    artifact-name: moNa2_R-trackball-diagnostic
